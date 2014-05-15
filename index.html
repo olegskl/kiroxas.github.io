@@ -2,7 +2,63 @@
 <head> 
   <meta charset="utf-8" />
   <title>Kiroxas's Page</title>
+  <style type="text/css">
+   @font-face {
+        font-family: 'fontello';
+        src: url('data:application/octet-stream;base64,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') format('woff');
+    }
+
+  
+  [class^="icon-"]:before,
+    [class*=" icon-"]:before {
+        display: inline-block;
+        width: 1em;
+        margin: 0 0.2em;
+        font-family: "fontello";
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        line-height: 1.2em;
+        vertical-align: middle;
+        text-decoration: inherit;
+        text-align: center;
+        text-transform: none;
+        speak: none;
+    }
+
+    .icon-signal:before { content: '\e800'; }
+    .icon-github:before { content: '\e807'; }
+    .icon-stackoverflow:before { content: '\e80a'; }
+   
+   
+    .socialMediaItem {
+        display: inline;
+    }
+    .socialMediaLink {
+        font-size: 1.6em;
+        color: #666;
+    }
+    .socialMediaName {
+        font-size: 18px;
+        line-height: 1.4em;
+        display: none;
+    }
+   
+  </style>
 </head>
-Nothing to see here, move along.
-今すぐ立ち去れ
+ようこそう
+
+<section>
+<ul class="socialMediaList">
+    <li class="socialMediaItem">
+        <a title="Github" class="socialMediaLink icon-github" href="https://github.com/kiroxas"><span class="socialMediaName">Github</span></a>
+    </li>
+    <li class="socialMediaItem">
+        <a title="StackOverflow" class="socialMediaLink icon-stackoverflow" href="http://stackoverflow.com/users/2617660/kiroxas"><span class="socialMediaName">StackOverflow</span></a>
+    </li>
+    <li class="socialMediaItem">
+        <a title="Careers 2.0 by StackOverflow" class="socialMediaLink icon-signal" href="http://careers.stackoverflow.com/guillaumemouton"><span class="socialMediaName">CV</span></a>
+    </li>
+    </ul>
+</section>
 </html>
