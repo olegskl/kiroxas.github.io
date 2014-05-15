@@ -65,6 +65,26 @@
         line-height: 1.4em;
         display: none;
     }
+    
+      @media only screen and (orientation: portrait) {
+        a { line-height: 2.2em; }
+        .container { margin-top: -235px; }
+        .socialMediaItem:nth-child(3n):after {
+            content: '\A';
+            white-space: pre;
+        }
+    }
+    @media only screen and (max-device-width : 1024px) {
+        html {
+            -webkit-text-size-adjust: 100%;
+        }
+    }
+    @media only screen and (max-height: 325px) {
+        .container {
+            margin-top: 0;
+            top: 0%;
+        }
+    }
    
   </style>
 </head>
