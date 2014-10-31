@@ -3,7 +3,7 @@
 angular.module('Alice').value('taskList', [
     {
         title: 'Arrivé au Japon',
-        photo: 'http://www.nostro.fr/wp/wp-content/uploads/2014/08/IMG_9136_DxO_Tokyo_Yoyogi_Park.jpg'
+        photo: null
     },
     {
         title: 'Un duel dans une salle d\'arcade',
@@ -11,6 +11,30 @@ angular.module('Alice').value('taskList', [
     },
     {
         title: 'Une photo devant le mont Fuji',
+        photo: null
+    },
+    {
+        title : 'Guillaume en Sumo',
+        photo: null
+    },
+    {
+        title : 'Alice en Geisha',
+        photo: null
+    },
+    {
+        title : 'Photo de WC bizzare',
+        photo: null
+    },
+    {
+        title: 'Photo de Sumo',
+        photo : null
+    },
+    {
+        title: 'Alice en Hello Kitty',
+        photo: null
+    },
+    {
+        title : 'Photo avec un Shiba',
         photo: null
     }
 ]);
