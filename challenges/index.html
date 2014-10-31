@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr" ng-app="Alice">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alice &amp; Guillaume : Défis Japonais</title>
+  <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Roboto:100,300'>
+  <link rel="stylesheet" type="text/css" href="styles/reset.css">
+  <link rel="stylesheet" type="text/css" href="styles/fonts.css">
+  <link rel="stylesheet" type="text/css" href="styles/base.css">
+
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/taskList.js"></script>
+  <script src="js/TasksCtrl.js"></script>
+</head>
+<body ng-controller="TasksCtrl">
+
+<header>
+  <div class="container">
+    <div class="logo alice-face-unlock"></div>
+    <h1 class="app-title">Alice &amp; Guillaume : Défis Japonais</h1>
+  </div>
+</header>
+
+<section class="container">
+
+  <ul class="task-list">
+
+    <li class="task"
+        ng-repeat="task in tasks track by task.title"
+        ng-class="{'task-done': isDone(task), 'task-unwrap': task.isUnwrapped}">
+      <div class="task-tick alice-done"></div>
+      <div class="task-body">
+        <a id="{{ generateAnchorId(task) }}"
+           class="task-title"
+           ng-click="toggleUnwrapTask(task)">
+          {{ task.title }}
+        </a>
+        <div class="task-image"
+             ng-style="getTaskBodyStyle(task)">
+        </div>
+      </div>
+    </li>
+
+  </ul>
+
+</section>
+
+</body>
+</html>
