@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" ng-app="Alice">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +8,13 @@
   <link rel="stylesheet" type="text/css" href="styles/reset.css">
   <link rel="stylesheet" type="text/css" href="styles/fonts.css">
   <link rel="stylesheet" type="text/css" href="styles/base.css">
+
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/taskList.js"></script>
+  <script src="js/TasksCtrl.js"></script>
 </head>
-<body>
+<body ng-controller="TasksCtrl">
 
 <header>
   <div class="container">
@@ -19,70 +24,27 @@
 </header>
 
 <section class="container">
+
   <ul class="task-list">
-    <li class="task task-done task-unwrap">
-      <div class="task-tick alice-done" ></div>
+
+    <li class="task"
+        ng-repeat="task in tasks track by task.title"
+        ng-class="{'task-done': isDone(task), 'task-unwrap': task.isUnwrapped}">
+      <div class="task-tick alice-done"></div>
       <div class="task-body">
-        <a id="arrive-au-japon" class="task-title">Arrivé au Japon</a>
-        <div class="task-image" style="background-image:url('http://www.nostro.fr/wp/wp-content/uploads/2014/08/IMG_9136_DxO_Tokyo_Yoyogi_Park.jpg')"></div>
-      </div>
-    </li>
-    <li class="task">
-      <div class="task-tick alice-local-see"></div>
-      <div class="task-body">
-        <a id="arrive-au-japon" class="task-title">Alice achete sa première boisson au distributeur</a>
-      </div>
-    </li>
-    <li class="task">
-      <div class="task-tick alice-local-see"></div>
-      <div class="task-body">
-        <a id="arrive-au-japon" class="task-title">Un duel dans une salle d'arcade</a>
-      </div>
-    </li>
-    <li class="task">
-      <div class="task-tick alice-local-see"></div>
-      <div class="task-body">
-        <a id="arrive-au-japon" class="task-title">Une photo devant le mont Fuji</a>
+        <a id="{{ generateAnchorId(task) }}"
+           class="task-title"
+           ng-click="toggleUnwrapTask(task)">
+          {{ task.title }}
+        </a>
+        <div class="task-image"
+             ng-style="getTaskBodyStyle(task)">
+        </div>
       </div>
     </li>
 
-    <li class="task">
-      <div class="task-tick alice-local-see"></div>
-      <div class="task-body">
-        <a id="arrive-au-japon" class="task-title">Alice achete sa première boisson au distributeur</a>
-      </div>
-    </li>
-    <li class="task">
-      <div class="task-tick alice-local-see"></div>
-      <div class="task-body">
-        <a id="arrive-au-japon" class="task-title">Un duel dans une salle d'arcade</a>
-      </div>
-    </li>
-    <li class="task">
-      <div class="task-tick alice-local-see"></div>
-      <div class="task-body">
-        <a id="arrive-au-japon" class="task-title">Une photo devant le mont Fuji</a>
-      </div>
-    </li>
-    <li class="task">
-      <div class="task-tick alice-local-see"></div>
-      <div class="task-body">
-        <a id="arrive-au-japon" class="task-title">Alice achete sa première boisson au distributeur</a>
-      </div>
-    </li>
-    <li class="task">
-      <div class="task-tick alice-local-see"></div>
-      <div class="task-body">
-        <a id="arrive-au-japon" class="task-title">Un duel dans une salle d'arcade</a>
-      </div>
-    </li>
-    <li class="task">
-      <div class="task-tick alice-local-see"></div>
-      <div class="task-body">
-        <a id="arrive-au-japon" class="task-title">Une photo devant le mont Fuji</a>
-      </div>
-    </li>
   </ul>
+
 </section>
 
 </body>

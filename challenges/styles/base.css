@@ -38,15 +38,6 @@ header {
   margin: 1rem 0;
 }
 
-.task-done .task-tick {
-  border: none;
-  background-color: #8bc34a;
-}
-
-.task-done .task-tick:before {
-  color: #f1f8e9;
-}
-
 .task {
   height: 6rem;
   line-height: 6rem;
@@ -59,19 +50,24 @@ header {
   width: 4rem;
   height: 4rem;
   margin: 1rem;
-  box-shadow: 0 0 7px rgba(0,0,0,0.1);
+  box-shadow: 0 0 1px rgba(0,0,0,0.3);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: auto 6rem;
   border-radius: 50%;
   cursor: pointer;
+
+  /* Not accomplished by default */
+  background-color: #f36c60;
 }
 
 .task-tick:before {
   margin: 0 1.25rem;
   line-height: 4rem;
   font-size: 1.5rem;
-  color: #999;
+
+  /* Not accomplished by default */
+  color: #fff;
 }
 
 .task-tick:after {
@@ -84,6 +80,16 @@ header {
   content: '';
 }
 
+
+.task-done .task-tick {
+  border: none;
+  background-color: #8bc34a;
+}
+
+.task-done .task-tick:before {
+  color: #f1f8e9;
+}
+
 .task:last-child .task-tick:after {
   display: none;
 }
@@ -93,6 +99,8 @@ header {
   /*width: 31.5rem;*/
   float: left;
   border-bottom: 1px dotted #dadada;
+
+  transition: height 1s;
 }
 
 .task:last-child .task-body {
@@ -103,6 +111,7 @@ header {
   display: block;
   font-size: 1.4rem;
   font-weight: 300;
+  cursor: pointer;
 }
 
 .task .task-image {
