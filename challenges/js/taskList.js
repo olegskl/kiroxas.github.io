@@ -40,5 +40,9 @@ angular.module('Alice').value('taskList', [
     {
         title : 'Boire du Nigori à la santé de Rémi',
         photo : 'http://www.asianfoodgrocer.com/img/prods/sake/2184-sayuri-nigori-sake-lg.jpg'
+    },
+    {
+        title : 'Faire voyager l\'oeuf du CNJ',
+        photo : null
     }
 ]);
