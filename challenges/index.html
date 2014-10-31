@@ -18,8 +18,8 @@
 
 <header>
   <div class="container">
-    <div class="logo alice-face-unlock"></div>
-    <h1 class="app-title">Alice &amp; Guillaume : Défis Japonais</h1>
+    <h1 class="app-title">Défis Japonais</h1>
+    <div class="challenger">Alice &amp; Guillaume</div>
   </div>
 </header>
 
@@ -30,10 +30,12 @@
     <li class="task"
         ng-repeat="task in tasks track by task.title"
         ng-class="{'task-done': isDone(task), 'task-unwrap': task.isUnwrapped}">
-      <div class="task-tick alice-done"></div>
+
+      <div class="task-tick alice-done v-align"></div>
+
       <div class="task-body">
         <a id="{{ generateAnchorId(task) }}"
-           class="task-title"
+           class="task-title v-align"
            ng-click="toggleUnwrapTask(task)">
           {{ task.title }}
         </a>
@@ -41,6 +43,9 @@
              ng-style="getTaskBodyStyle(task)">
         </div>
       </div>
+
+      <div class="task-action alice-expand-more v-align"></div>
+
     </li>
 
   </ul>

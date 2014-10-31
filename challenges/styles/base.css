@@ -1,3 +1,9 @@
+/*
+ * Notes:
+ *
+ * 415px is the iPhone 6 width + 1px
+ */
+
 html {
   font-size: 16px;
   font-family: 'Roboto', sans-serif;
@@ -5,118 +11,201 @@ html {
   background-color: #f1f8e9;
 }
 
-.container {
-  margin: 0 auto;
-  max-width: 37.5rem;
+@media (min-width: 415px) {
+  .container {
+    margin: 0 auto;
+    max-width: 37.5rem;
+  }  
 }
 
+/* ---------- common ---------- */
+
+.v-align {
+  position: relative;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/* ---------- header ---------- */
+
 header {
-  height: 6rem;
+  height: 14rem;
   border-bottom: 1px solid #7cb342;
   color: #f1f8e9;
   background-color: #8bc34a;
   font-weight: 100;
 }
 
-.logo {
-  position: relative;
-  float: left;
-  width: 4rem;
-  height: 4rem;
-  margin: 1rem;
-  font-size: 4rem;
+@media (min-width: 415px) {
+  header {
+    height: 6rem;
+  }
 }
+
+/* ---------- app title ---------- */
 
 .app-title {
   margin: 0;
-  padding: 0 1rem;
-  line-height: 6rem;
-  font-size: 2rem;
+  padding: 8rem 1rem 0 1rem;
+  line-height: 2.5rem;
+  font-size: 2.5rem;
 }
+
+@media (min-width: 415px) {
+  .app-title {
+    padding: 0.5rem 1rem 0 1rem;
+    line-height: 3rem;
+    font-size: 2rem;
+  }
+}
+
+/* ---------- challenger ---------- */
+
+.challenger {
+  padding: 0 1rem;
+  line-height: 3.5rem;
+  font-size: 1.5rem;
+}
+
+@media (min-width: 415px) {
+  .challenger {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+  }
+}
+
+/* ---------- task list ---------- */
 
 .task-list {
-  margin: 1rem 0;
+  margin-top: 1px;
+  margin-bottom: 1rem;
 }
 
+/* ---------- task ---------- */
+
 .task {
-  height: 6rem;
-  line-height: 6rem;
+  height: 5rem;
   clear: both;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(0,0,0,0.04);
 }
+
+@media (min-height: 801px) {
+  .task {
+    height: 6rem;
+  }
+}
+
+/* ---------- task tick ---------- */
 
 .task-tick {
   position: relative;
   float: left;
-  width: 4rem;
-  height: 4rem;
-  margin: 1rem;
+  width: 3rem;
+  height: 3rem;
+  margin: 0 1rem;
   box-shadow: 0 0 1px rgba(0,0,0,0.3);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: auto 6rem;
   border-radius: 50%;
-  cursor: pointer;
 
   /* Not accomplished by default */
   background-color: #f36c60;
 }
 
-.task-tick:before {
-  margin: 0 1.25rem;
-  line-height: 4rem;
-  font-size: 1.5rem;
-
-  /* Not accomplished by default */
-  color: #fff;
+@media (min-width: 801px) {
+  .task-tick {
+    width: 4rem;
+    height: 4rem;
+  }
 }
-
-.task-tick:after {
-  position: absolute;
-  left: 50%;
-  bottom: -1.8rem;
-  width: 0;
-  height: 1.4rem;
-  border-left: 1px dotted #dadada;
-  content: '';
-}
-
 
 .task-done .task-tick {
   border: none;
   background-color: #8bc34a;
 }
 
+/* ---------- task tick circle ---------- */
+
+.task-tick:before {
+  margin: 0 0.75rem;
+  line-height: 3rem;
+  font-size: 1.5rem;
+
+  /* Not accomplished by default */
+  color: #fff;
+}
+
+@media (min-width: 801px) {
+  .task-tick:before {
+    margin: 0 1.25rem;
+    line-height: 4rem;
+  }
+}
+
 .task-done .task-tick:before {
   color: #f1f8e9;
 }
 
-.task:last-child .task-tick:after {
-  display: none;
-}
+/* ---------- task body ---------- */
 
 .task-body {
-  width: 84%;
-  /*width: 31.5rem;*/
+  width: calc(100% - 5rem - 3rem);
+  height: 5rem;
   float: left;
-  border-bottom: 1px dotted #dadada;
+}
 
-  transition: height 1s;
+@media (min-width: 801px) {
+  .task-body {
+    width: calc(100% - 6rem - 3rem);
+  }
+}
+
+@media (min-height: 801px) {
+  .task-body {
+    height: 6rem;
+  }
 }
 
 .task:last-child .task-body {
   border-bottom: none;
 }
 
+/* ---------- task title ---------- */
+
 .task-title {
-  display: block;
+  float: left;
+  
   font-size: 1.4rem;
   font-weight: 300;
+  line-height: 1.8rem;
   cursor: pointer;
 }
 
 .task .task-image {
   height: 0;
   margin: 0;
+}
+
+/* ---------- task action ---------- */
+
+.task-action {
+  float: right;
+  padding: 0 0.75rem;
+  width: 1.5rem;
+  line-height: 5rem;
+  font-size: 1.5rem;
+}
+
+@media (min-height: 801px) {
+  .task-action {
+    line-height: 6rem;
+  }
 }
 
 .task-unwrap .task-tick:after {
