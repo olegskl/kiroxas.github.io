@@ -12,12 +12,6 @@ angular.module('Alice').controller('TasksCtrl', function ($scope, taskList) {
         return task.title.split(/\s+/).join('-').toLowerCase();
     };
 
-    $scope.getTaskBodyStyle = function (task) {
-        return task.photo ?
-            {'background-image': 'url(' + task.photo + ')'} :
-            {};
-    };
-
     $scope.toggleUnwrapTask = function (task) {
         if (!task.photo) { return; }
         task.isUnwrapped = task.isUnwrapped ? false : true;

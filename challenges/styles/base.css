@@ -1,3 +1,9 @@
+/*
+ * Notes:
+ *
+ * 415px is the iPhone 6 width + 1px
+ */
+
 html {
   font-size: 16px;
   font-family: 'Roboto', sans-serif;
@@ -5,133 +11,225 @@ html {
   background-color: #f1f8e9;
 }
 
-.container {
-  margin: 0 auto;
-  max-width: 37.5rem;
+@media (min-width: 415px) {
+  .container {
+    margin: 0 auto;
+    max-width: 37.5rem;
+  }  
 }
 
+/* ---------- common ---------- */
+
+.v-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/* ---------- header ---------- */
+
 header {
-  height: 6rem;
+  height: 14rem;
   border-bottom: 1px solid #7cb342;
   color: #f1f8e9;
   background-color: #8bc34a;
   font-weight: 100;
 }
 
-.logo {
-  position: relative;
-  float: left;
-  width: 4rem;
-  height: 4rem;
-  margin: 1rem;
-  font-size: 4rem;
+@media (min-width: 415px) {
+  header {
+    height: 6rem;
+  }
 }
+
+/* ---------- app title ---------- */
 
 .app-title {
   margin: 0;
-  padding: 0 1rem;
-  line-height: 6rem;
-  font-size: 2rem;
+  padding: 8rem 1rem 0 1rem;
+  line-height: 2.5rem;
+  font-size: 2.5rem;
 }
+
+@media (min-width: 415px) {
+  .app-title {
+    padding: 0.5rem 1rem 0 1rem;
+    line-height: 3rem;
+    font-size: 2rem;
+  }
+}
+
+/* ---------- challenger ---------- */
+
+.challenger {
+  padding: 0 1rem;
+  line-height: 3.5rem;
+  font-size: 1.5rem;
+}
+
+@media (min-width: 415px) {
+  .challenger {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+  }
+}
+
+/* ---------- task list ---------- */
 
 .task-list {
-  margin: 1rem 0;
+  margin-top: 1px;
+  margin-bottom: 1rem;
 }
 
+/* ---------- task ---------- */
+
 .task {
-  height: 6rem;
-  line-height: 6rem;
   clear: both;
+  border-bottom: 1px solid rgba(0,0,0,0.04);
 }
+
+/* ---------- task header ---------- */
+
+.task-header {
+  height: 5rem;
+}
+
+@media (min-height: 801px) {
+  .task-header {
+    height: 6rem;
+  }
+}
+
+.task-done .task-header {
+  cursor: pointer;
+}
+
+/* ---------- task tick ---------- */
 
 .task-tick {
   position: relative;
   float: left;
-  width: 4rem;
-  height: 4rem;
-  margin: 1rem;
+  width: 3rem;
+  height: 3rem;
+  margin: 0 1rem;
   box-shadow: 0 0 1px rgba(0,0,0,0.3);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: auto 6rem;
   border-radius: 50%;
-  cursor: pointer;
 
   /* Not accomplished by default */
   background-color: #f36c60;
 }
 
-.task-tick:before {
-  margin: 0 1.25rem;
-  line-height: 4rem;
-  font-size: 1.5rem;
-
-  /* Not accomplished by default */
-  color: #fff;
+@media (min-width: 801px) {
+  .task-tick {
+    width: 4rem;
+    height: 4rem;
+  }
 }
-
-.task-tick:after {
-  position: absolute;
-  left: 50%;
-  bottom: -1.8rem;
-  width: 0;
-  height: 1.4rem;
-  border-left: 1px dotted #dadada;
-  content: '';
-}
-
 
 .task-done .task-tick {
   border: none;
   background-color: #8bc34a;
 }
 
+/* ---------- task tick circle ---------- */
+
+.task-tick:before {
+  margin: 0 0.75rem;
+  line-height: 3rem;
+  font-size: 1.5rem;
+
+  /* Not accomplished by default */
+  color: #fff;
+}
+
+@media (min-width: 801px) {
+  .task-tick:before {
+    margin: 0 1.25rem;
+    line-height: 4rem;
+  }
+}
+
 .task-done .task-tick:before {
   color: #f1f8e9;
 }
 
-.task:last-child .task-tick:after {
-  display: none;
-}
+/* ---------- task body ---------- */
 
 .task-body {
-  width: 84%;
-  /*width: 31.5rem;*/
-  float: left;
-  border-bottom: 1px dotted #dadada;
-
-  transition: height 1s;
+  width: -webkit-calc(100% - 2rem);
+  width: calc(100% - 2rem);
+  margin: 0 1rem;
+  -webkit-transition: margin-bottom 0.3s;
+  transition: margin-bottom 0.3s;
 }
 
-.task:last-child .task-body {
-  border-bottom: none;
+.task-unwrap .task-body {
+  margin-bottom: 1rem;
 }
 
-.task-title {
-  display: block;
-  font-size: 1.4rem;
-  font-weight: 300;
-  cursor: pointer;
-}
-
-.task .task-image {
-  height: 0;
-  margin: 0;
-}
-
-.task-unwrap .task-tick:after {
-  height: 24.4rem;
-  bottom: -24.8rem;
-}
-.task-unwrap .task-image {
-  height: 20rem;
-  margin-bottom: 3rem;
-}
+/* ---------- task image ---------- */
 
 .task-image {
-  /*width: 31.5rem;*/
-  width: 100%;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  display: block;
+  max-height: 0;
+  border-radius: 0.2rem;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-transition: max-height 0.3s;
+  transition: max-height 0.3s;
+}
+
+.task-unwrap .task-image {
+  max-height: 1000px;
+}
+
+/* ---------- task title ---------- */
+
+.task-title {
+  float: left;
+  width: -webkit-calc(100% - 5rem - 3rem);
+  width: calc(100% - 5rem - 3rem);
+
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height: 1.8rem;
+}
+
+@media (min-width: 801px) {
+  .task-title {
+    width: -webkit-calc(100% - 6rem - 3rem);
+    width: calc(100% - 6rem - 3rem);
+  }
+}
+
+/* ---------- task action ---------- */
+
+.task-action {
+  position: relative;
+  float: right;
+  width: 3rem;
+  height: 3rem;
+  padding: 1rem 0;
+  line-height: 3rem;
+  text-align: center;
+  font-size: 1.5rem;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+}
+
+@media (min-height: 801px) {
+  .task-action {
+    padding: 1.5rem 0;
+  }
+}
+
+.task-unwrap .task-action {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
 }
