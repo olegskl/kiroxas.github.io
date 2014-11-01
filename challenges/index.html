@@ -36,10 +36,9 @@
         <div class="task-tick v-align"
              ng-class="isDone(task) ? 'alice-done' : 'alice-access-time'">
         </div>
-        <a class="task-title v-align"
-           id="{{ generateAnchorId(task) }}">
+        <div class="task-title v-align">
           {{ task.title }}
-        </a>
+        </div>
         <div class="task-action alice-expand-more"
              ng-if="isDone(task)">
         </div>
