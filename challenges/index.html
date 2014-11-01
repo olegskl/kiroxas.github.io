@@ -33,7 +33,9 @@
 
       <div class="task-header"
            ng-click="toggleUnwrapTask(task)">
-        <div class="task-tick alice-done v-align"></div>
+        <div class="task-tick v-align"
+             ng-class="isDone(task) ? 'alice-done' : 'alice-access-time'">
+        </div>
         <a class="task-title v-align"
            id="{{ generateAnchorId(task) }}">
           {{ task.title }}
