@@ -44,5 +44,9 @@ angular.module('Alice').value('taskList', [
     {
         title : 'Faire voyager l\'oeuf du CNJ',
         photo : null
+    },
+    {
+        title : 'Faire les supporters du FC Nantes',
+        photo : null
     }
 ]);
