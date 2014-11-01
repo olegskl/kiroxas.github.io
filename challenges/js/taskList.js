@@ -2,6 +2,10 @@
 
 angular.module('Alice').value('taskList', [
     {
+        title: 'Avoie une fête de départ réussie',
+        photo: null
+    },
+    {
         title: 'Arrivé au Japon',
         photo: null
     },
