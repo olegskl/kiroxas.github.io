@@ -3,7 +3,7 @@
 angular.module('Alice').value('taskList', [
     {
         title: 'Avoir une fête de départ réussie',
-        photo: null
+        photo: '../Photos/soiree.JPEG'
     },
     {
         title: 'Arriver au Japon',
