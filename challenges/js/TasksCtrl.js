@@ -8,10 +8,6 @@ angular.module('Alice').controller('TasksCtrl', function ($scope, taskList) {
         return !!task.photo;
     };
 
-    $scope.generateAnchorId = function (task) {
-        return task.title.split(/\s+/).join('-').toLowerCase();
-    };
-
     $scope.toggleUnwrapTask = function (task) {
         if (!task.photo) { return; }
         task.isUnwrapped = task.isUnwrapped ? false : true;
