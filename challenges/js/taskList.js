@@ -7,6 +7,14 @@ angular.module('Alice').value('taskList', [
     },
     {
         title: 'Arriver au Japon',
+        photo: './Photos/arrivee.JPG'
+    },
+    {
+        title: 'Alice achetes sa 1ère boisson au distributeur',
+        photo: './Photos/distributeur.JPG'
+    },
+    {
+        title: 'Photo avec une bouteille de whisky japonais',
         photo: null
     },
     {
