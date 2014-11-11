@@ -39,7 +39,7 @@ angular.module('Alice').value('taskList', [
     },
     {
         title: 'Photo de Sumo',
-        photo : null
+        photo : './Photos/sumo.JPG'
     },
     {
         title: 'Alice en Hello Kitty',
