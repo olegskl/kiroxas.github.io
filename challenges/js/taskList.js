@@ -1,4 +1,4 @@
-'use strict';
+﻿'use strict';
 
 angular.module('Alice').value('taskList', [
     {
@@ -52,5 +52,9 @@ angular.module('Alice').value('taskList', [
     {
         title : 'Faire les supporters du FC Nantes',
         photo : null
+    },
+    {
+	title : 'Faire une photo avec Mega Dracaufeu',
+	photo : null
     }
 ]);
