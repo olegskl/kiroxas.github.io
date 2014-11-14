@@ -10,7 +10,7 @@ angular.module('Alice').value('taskList', [
         photo: './Photos/arrivee.JPG'
     },
     {
-        title: 'Alice achetes sa 1ère boisson au distributeur',
+        title: 'Alice achete sa 1ère boisson au distributeur',
         photo: './Photos/distributeur.JPG'
     },
     {
@@ -18,8 +18,8 @@ angular.module('Alice').value('taskList', [
         photo: null
     },
     {
-        title: 'Un duel dans une salle d\'arcade',
-        photo: null
+        title: 'Faire du Taiko no Tatsujin dans une salle d\'arcade',
+        photo: './Photos/game.JPG'
     },
     {
         title: 'Une photo devant le mont Fuji',
@@ -63,6 +63,26 @@ angular.module('Alice').value('taskList', [
     },
     {
 	title : 'Faire une photo avec Mega Dracaufeu',
+	photo : null
+    },
+    {
+	title : 'Rencontre avec une Ganguro',
+	photo : null
+    },
+    {
+	title : 'Faire une session de Purikura',
+	photo : null
+    },
+    {
+	title : 'Alice fait un Ringo Tsutsumi',
+	photo : null
+    },
+    {
+	title : 'Guillaume fait un Yotsu Musubi',
+	photo : null
+    },
+    {
+	title : 'Une partie de Go contre un Japonais',
 	photo : null
     }
 ]);
