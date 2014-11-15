@@ -1,15 +1,22 @@
 'use strict';
 
-angular.module('Alice').controller('TasksCtrl', function ($scope, taskList) {
+angular.module('Alice').controller('TasksCtrl', function ($scope, $window, taskList) {
+
+    // High resolution display, e.g. "retina":
+    var isHighResDisplay = $window.devicePixelRatio > 1;
 
     $scope.tasks = taskList;
 
+    $scope.getPhoto = function (task) {
+        return (isHighResDisplay ? task.photo2x : task.photo1x) || task.photo;
+    };
+
     $scope.isDone = function (task) {
-        return !!task.photo;
+        return $scope.getPhoto(task) ? true : false;
     };
 
     $scope.toggleUnwrapTask = function (task) {
-        if (!task.photo) { return; }
+        if (!$scope.isDone(task)) { return; }
         task.isUnwrapped = task.isUnwrapped ? false : true;
     };
 
