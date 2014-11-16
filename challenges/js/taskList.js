@@ -84,7 +84,9 @@ angular.module('Alice').value('taskList', [
     },
     {
         title : 'Faire les supporters du FC Nantes',
-        photo : './Photos/nantes.JPG'
+        photo : './Photos/nantes.JPG',
+        photo1x : './Photos/1x/nantes.JPG',
+        photo2x : './Photos/2x/nantes.JPG'
     },
     {
         title: 'Faire une photo avec Mega Dracaufeu',
