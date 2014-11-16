@@ -20,8 +20,13 @@
   <div class="container">
 
     <nav class="app-nav">
-      <a class="app-nav-item alice-uniE600 alice-tap-animation"
-         href="https://www.facebook.com/pages/Voyage-au-Japon/436716066468871"></a>
+      <div class="app-nav-group">
+        <a class="app-nav-item alice-tap-animation"
+           ng-class="{'alice-view-module': !isGallery, 'alice-view-list': isGallery}"
+           ng-click="isGallery = !isGallery"></a>
+        <a class="app-nav-item alice-uniE600 alice-tap-animation"
+           href="https://www.facebook.com/pages/Voyage-au-Japon/436716066468871"></a>
+      </div>
     </nav>
 
     <h1 class="app-title">Défis Japonais</h1>
@@ -31,7 +36,11 @@
 
 <section class="container">
 
-  <ul class="task-list">
+  <!--
+  == Task list
+  ================= -->
+
+  <ul class="task-list" ng-if="!isGallery">
 
     <li class="task"
         ng-repeat="task in tasks track by task.title"
@@ -58,6 +67,22 @@
         </a>
       </div>
 
+    </li>
+
+  </ul>
+
+  <!--
+  == Image gallery
+  ================= -->
+
+  <ul class="gallery" ng-if="isGallery">
+
+    <li class="gallery-item"
+        ng-repeat="task in tasks | filter:isDone track by task.title">
+      <a class="gallery-item-image"
+         ng-href="{{ task.photo }}"
+         ng-style="{'background-image': 'url(' + getPhoto(task) + ')'}">
+      </a>
     </li>
 
   </ul>
