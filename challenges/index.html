@@ -51,9 +51,11 @@
       </div>
 
       <div class="task-body">
-           <img class="task-image"
-                ng-src="{{ task.isUnwrapped ? task.photo : null }}"
-                width="100%">
+        <a ng-href="{{ task.photo }}">
+          <img class="task-image"
+               ng-src="{{ task.isUnwrapped ? getPhoto(task) : null }}"
+               width="100%">
+        </a>
       </div>
 
     </li>

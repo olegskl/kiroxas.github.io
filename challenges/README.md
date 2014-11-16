@@ -1,4 +1,4 @@
-# Défis Japonais 0.1
+# Défis Japonais 0.1.1
 
 **がんばってね！**
 
@@ -16,9 +16,10 @@ Currently not implemented natively...
 1. Upload an image to whatever resource you want (must be public and accessible over the Internet)
 2. Open `challenges/js/taskList.js` file
 3. Set the absolute url to the `photo` attribute of the task you want to mark as *accomplished*
+4. Optionally provide `photo1x` (568px wide) and `photo2x` (1136px wide) attributes for images that fit best the display resolution of the device
 
 ### Notes
 
-The `null` value of `photo` property indicates that the task is not complete. The incomplete task shows up with a red tick and no possibility to open it.
-
-Don't forget to add commas `,` where necessary...
+ - Please keep task titles short, long titles are broken...
+ - The `null` value of `photo` property indicates that the task is not complete. The incomplete task shows up with a red tick and no possibility to open it.
+ - Don't forget to add commas `,` where necessary.
