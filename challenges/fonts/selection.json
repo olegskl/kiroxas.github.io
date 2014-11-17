@@ -4,31 +4,46 @@
 		{
 			"icon": {
 				"paths": [
-					"M512 0c282.77 0 512 229.23 512 512 0 261.094-195.438 476.53-448 508.026v-380.026h176l16-128h-192v-64c0-35.346 28.654-64 64-64h128v-128h-128c-106.040 0-192 85.96-192 192v64h-96v128h96v380.026c-252.562-31.496-448-246.932-448-508.026 0-282.77 229.23-512 512-512z"
+					"M170.667 597.333h170.667v-170.667h-170.667v170.667zM170.667 810.667h170.667v-170.667h-170.667v170.667zM170.667 384h170.667v-170.667h-170.667v170.667zM384 597.333h512v-170.667h-512v170.667zM384 810.667h512v-170.667h-512v170.667zM384 213.333v170.667h512v-170.667h-512z"
 				],
-				"attrs": [
-					{
-						"opacity": 1,
-						"visibility": false
-					}
+				"attrs": [],
+				"tags": [
+					"view-list"
 				],
-				"grid": 16
+				"grid": 24
 			},
-			"attrs": [
-				{
-					"opacity": 1,
-					"visibility": false
-				}
-			],
+			"attrs": [],
 			"properties": {
-				"order": 1,
-				"id": 0,
-				"prevSize": 32,
-				"code": 58880,
-				"name": "uniE600"
+				"id": 151,
+				"order": 7,
+				"prevSize": 24,
+				"code": 58884,
+				"name": "view-list"
 			},
-			"setIdx": 1,
-			"iconIdx": 0
+			"setIdx": 0,
+			"iconIdx": 151
+		},
+		{
+			"icon": {
+				"paths": [
+					"M170.667 469.333h213.333v-256h-213.333v256zM170.667 768h213.333v-256h-213.333v256zM426.667 768h213.333v-256h-213.333v256zM682.667 768h213.333v-256h-213.333v256zM426.667 469.333h213.333v-256h-213.333v256zM682.667 213.333v256h213.333v-256h-213.333z"
+				],
+				"attrs": [],
+				"tags": [
+					"view-module"
+				],
+				"grid": 24
+			},
+			"attrs": [],
+			"properties": {
+				"id": 152,
+				"order": 6,
+				"prevSize": 24,
+				"code": 58885,
+				"name": "view-module"
+			},
+			"setIdx": 0,
+			"iconIdx": 152
 		},
 		{
 			"icon": {
@@ -59,13 +74,13 @@
 			],
 			"properties": {
 				"id": 289,
-				"order": 3,
+				"order": 4,
 				"prevSize": 24,
 				"code": 58881,
 				"name": "access-time"
 			},
-			"setIdx": 3,
-			"iconIdx": 0
+			"setIdx": 1,
+			"iconIdx": 1
 		},
 		{
 			"icon": {
@@ -81,13 +96,13 @@
 			"attrs": [],
 			"properties": {
 				"id": 683,
-				"order": 2,
+				"order": 3,
 				"prevSize": 24,
 				"code": 58883,
 				"name": "expand-more"
 			},
-			"setIdx": 3,
-			"iconIdx": 1
+			"setIdx": 1,
+			"iconIdx": 2
 		},
 		{
 			"icon": {
@@ -103,14 +118,43 @@
 			"attrs": [],
 			"properties": {
 				"id": 35,
-				"order": 1,
+				"order": 2,
 				"prevSize": 24,
 				"code": 58882,
 				"name": "done",
 				"ligatures": ""
 			},
-			"setIdx": 3,
-			"iconIdx": 2
+			"setIdx": 1,
+			"iconIdx": 3
+		},
+		{
+			"icon": {
+				"paths": [
+					"M512 0c282.77 0 512 229.23 512 512 0 261.094-195.438 476.53-448 508.026v-380.026h176l16-128h-192v-64c0-35.346 28.654-64 64-64h128v-128h-128c-106.040 0-192 85.96-192 192v64h-96v128h96v380.026c-252.562-31.496-448-246.932-448-508.026 0-282.77 229.23-512 512-512z"
+				],
+				"attrs": [
+					{
+						"opacity": 1,
+						"visibility": false
+					}
+				],
+				"grid": 16
+			},
+			"attrs": [
+				{
+					"opacity": 1,
+					"visibility": false
+				}
+			],
+			"properties": {
+				"order": 1,
+				"id": 0,
+				"prevSize": 32,
+				"code": 58880,
+				"name": "uniE600"
+			},
+			"setIdx": 1,
+			"iconIdx": 0
 		}
 	],
 	"height": 1024,
