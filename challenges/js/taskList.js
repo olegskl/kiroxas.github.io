@@ -1,4 +1,4 @@
-'use strict';
+﻿'use strict';
 
 /**
  * List of tasks to accomplish.
@@ -76,7 +76,7 @@ angular.module('Alice').value('taskList', [
     },
     {
         title: 'Boire du Nigori à la santé de Rémi',
-        photo: null
+        photo: './Photos/nigori.JPG'
     },
     {
         title: 'Faire voyager l\'oeuf du CNJ',
