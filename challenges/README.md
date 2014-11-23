@@ -1,4 +1,4 @@
-# Défis Japonais 0.1.1
+# Défis Japonais 0.1.2
 
 **がんばってね！**
 
