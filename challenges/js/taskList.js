@@ -76,7 +76,9 @@ angular.module('Alice').value('taskList', [
     },
     {
         title: 'Boire du Nigori à la santé de Rémi',
-        photo: './Photos/nigori.JPG'
+        photo: './Photos/nigori.JPG',
+        photo1x: './Photos/1x/nigori.JPG',
+        photo2x: './Photos/2x/nigori.JPG'
     },
     {
         title: 'Faire voyager l\'oeuf du CNJ',
