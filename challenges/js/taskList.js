@@ -72,7 +72,7 @@ angular.module('Alice').value('taskList', [
     },
     {
         title: 'Photo avec un Shiba',
-        photo: null
+        photo: './Photos/shiba.JPG'
     },
     {
         title: 'Boire du Nigori à la santé de Rémi',
@@ -80,7 +80,7 @@ angular.module('Alice').value('taskList', [
     },
     {
         title: 'Faire voyager l\'oeuf du CNJ',
-        photo: null
+        photo: './Photos/oeuf.JPG'
     },
     {
         title : 'Faire les supporters du FC Nantes',
@@ -90,7 +90,7 @@ angular.module('Alice').value('taskList', [
     },
     {
         title: 'Faire une photo avec Mega Dracaufeu',
-        photo: null
+        photo: './Photos/dracaufeu.JPG'
     },
     {
         title: 'Rencontre avec une Ganguro',
