@@ -72,7 +72,9 @@ angular.module('Alice').value('taskList', [
     },
     {
         title: 'Photo avec un Shiba',
-        photo: './Photos/shiba.JPG'
+        photo: './Photos/shiba.JPG',
+        photo1x: './Photos/1x/shiba.JPG',
+        photo2x: './Photos/2x/shiba.JPG'
     },
     {
         title: 'Boire du Nigori à la santé de Rémi',
@@ -82,7 +84,9 @@ angular.module('Alice').value('taskList', [
     },
     {
         title: 'Faire voyager l\'oeuf du CNJ',
-        photo: './Photos/oeuf.JPG'
+        photo: './Photos/oeuf.JPG',
+        photo1x: './Photos/1x/oeuf.JPG',
+        photo2x: './Photos/2x/oeuf.JPG'
     },
     {
         title : 'Faire les supporters du FC Nantes',
@@ -92,7 +96,9 @@ angular.module('Alice').value('taskList', [
     },
     {
         title: 'Faire une photo avec Mega Dracaufeu',
-        photo: './Photos/dracaufeu.JPG'
+        photo: './Photos/dracaufeu.JPG',
+        photo1x: './Photos/1x/dracaufeu.JPG',
+        photo2x: './Photos/2x/dracaufeu.JPG'
     },
     {
         title: 'Rencontre avec une Ganguro',
