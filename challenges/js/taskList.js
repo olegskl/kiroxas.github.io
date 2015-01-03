@@ -36,7 +36,7 @@ angular.module('Alice').value('taskList', [
     },
     {
         title: 'Photo avec une bouteille de whisky japonais',
-        photo: null
+        photo: './Photos/whisky.JPG'
     },
     {
         title: 'Faire du Taiko no Tatsujin dans une salle d\'arcade',
