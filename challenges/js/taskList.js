@@ -110,7 +110,7 @@ angular.module('Alice').value('taskList', [
     },
     {
         title: 'Alice fait un Ringo Tsutsumi',
-        photo: null
+        photo: './Photos/ringo.JPG'
     },
     {
         title: 'Guillaume fait un Yotsu Musubi',
