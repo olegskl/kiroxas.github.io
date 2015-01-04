@@ -114,7 +114,7 @@ angular.module('Alice').value('taskList', [
     },
     {
         title: 'Guillaume fait un Yotsu Musubi',
-        photo: null
+        photo: './Photos/pliage.JPG'
     },
     {
         title: 'Une partie de Go contre un Japonais',
