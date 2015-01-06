@@ -36,7 +36,9 @@ angular.module('Alice').value('taskList', [
     },
     {
         title: 'Photo avec une bouteille de whisky japonais',
-        photo: './Photos/whisky.JPG'
+        photo: './Photos/whisky.JPG',
+        photo1x: './Photos/1x/whisky.JPG',
+        photo2x: './Photos/2x/whisky.JPG'
     },
     {
         title: 'Faire du Taiko no Tatsujin dans une salle d\'arcade',
@@ -110,11 +112,15 @@ angular.module('Alice').value('taskList', [
     },
     {
         title: 'Alice fait un Ringo Tsutsumi',
-        photo: './Photos/ringo.JPG'
+        photo: './Photos/ringo.JPG',
+        photo1x: './Photos/1x/ringo.JPG',
+        photo2x: './Photos/2x/ringo.JPG'
     },
     {
         title: 'Guillaume fait un Yotsu Musubi',
-        photo: './Photos/pliage.JPG'
+        photo: './Photos/pliage.JPG',
+        photo1x: './Photos/1x/pliage.JPG',
+        photo2x: './Photos/2x/pliage.JPG'
     },
     {
         title: 'Une partie de Go contre un Japonais',
