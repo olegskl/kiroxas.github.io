@@ -48,7 +48,7 @@ angular.module('Alice').value('taskList', [
     },
     {
         title: 'Une photo devant le mont Fuji',
-        photo: null
+        photo: './Photos/fuji.JPG'
     },
     {
         title: 'Guillaume en Sumo',
@@ -60,7 +60,7 @@ angular.module('Alice').value('taskList', [
     },
     {
         title: 'Photo de WC bizzare',
-        photo: null
+        photo: './Photos/toilette.JPG'
     },
     {
         title: 'Photo de Sumo',
@@ -108,7 +108,7 @@ angular.module('Alice').value('taskList', [
     },
     {
         title: 'Faire une session de Purikura',
-        photo: null
+        photo: './Photos/purikura.JPG'
     },
     {
         title: 'Alice fait un Ringo Tsutsumi',
